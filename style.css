@@ -1,0 +1,399 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #8b41f2;
+  color: #383637;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 23, 57, 0.8);
+  backdrop-filter: blur(10px);
+  color: rgb(243, 184, 142);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #00eaff;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: rgba(248, 189, 149, 0.918);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00eaff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width : 100%;
+}
+/* Mode*/
+#theme{
+  position: fixed;
+  top:0px;
+  right:0px;
+  border-radius: 5px;
+  height: 30px;
+  width: 70px;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Music*/
+audio {
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  width:250px;
+  height: 200px;
+  opacity: 0.7;
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 220px 20px;
+ background-image: url("https://housing-images.n7net.in/4f2250e8/3ad3f5d2251625898342e0bebeaa4699/v0/fs/ankura_konak_mansions-shankarpally-hyderabad-ankura_homes.png");
+ background-size: cover;
+  color: #ef0707cf;
+  text-shadow: #00eaff;
+  text-wrap: initial;
+  animation: fadeInHero 1s ease-in;
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 12px rgba(191, 228, 234, 0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #fa1017f0;
+}
+
+#getStarted {
+  background: linear-gradient(90deg, #00eaff, #0096ff);
+  border: none;
+  color: white;
+  padding: 14px 35px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 0 10px rgba(0,234,255,0.4);
+}
+
+#getStarted:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,234,255,0.7);
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, rgb(112, 178, 219),rgb(11,23,57));
+}
+.features:hover {
+  background-color:blueviolet;
+  background: linear-gradient(180deg, rgb(112, 178, 219),rgb(11,23,57));
+}
+
+.feature-card {
+  background: rgba(195, 228, 246, 0.7);
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #6a2ebd;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  width: 240px;
+  backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(196, 93, 182, 0.3);
+}
+
+/* Marketing Section */
+.marketing {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgb(168, 86, 170);
+  background-color: #e578ce;
+   background: linear-gradient(180deg, rgb(108, 180, 228),rgb(67, 82, 94));
+}
+
+.marketing h2 {
+  font-size: 2.4rem;
+  color: #0b1739;
+  margin-bottom: 15px;
+}
+
+.marketing p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.house-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  
+}
+
+.house-card {
+  background: linear-gradient(180deg, #a7c3da, #f8faff);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.4s ease;
+  max-width: 320px;
+  opacity: 0;
+  transform: translateY(40px);
+  
+}
+
+.house-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.house-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
+}
+
+.house-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #00bfff;
+}
+
+.house-card h3 {
+  margin: 15px 0 5px;
+  color: #0078ff;
+  font-size: 1.2rem;
+}
+
+.house-card p {
+  padding: 0 15px;
+  color: #555;
+  font-size: 0.95rem;
+  min-height: 60px;
+}
+
+.learn-more {
+  background: linear-gradient(90deg, #0078ff, #00eaff);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  margin: 15px 0 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 150, 255, 0.3);
+}
+
+.learn-more:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+}
+
+/* About Section */
+.about {
+  background: linear-gradient(180deg, #99c0ec, #cce9f0);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #343435;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #222222;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background: #dae5f1;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #0b1739;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #282828;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: #0b1739;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+/* Feedback*/
+#feed{
+    font-size: 30px;
+    padding-right:1290px;
+    background-color:#dae5f1;
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #a7c3da;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group a{
+    text-decoration: none;
+  }
+  
+  input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  
+  .login-button {
+    background-color: #1882a8;
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 95px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  .login-button:hover {
+    background-color: #57a1f0;
+  }
+  textarea {
+    font-size: 15px;
+    border-radius: 4px;
+  }
+  .feedback-tag {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+
+  .house-container {
+    grid-template-columns: 1fr;
+  }
+}
+

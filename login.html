@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!--language control-->
+   <!-- Google Translate -->
+     <div id="google_translate_element"></div>
+     <script type="text/javascript">
+       function googleTranslateElementInit() {
+         new google.translate.TranslateElement(
+           {pageLanguage: 'en'},
+           'google_translate_element'
+         );
+       }
+     </script>
+     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ 
+       <a href="index.html"> <button id="back"><<--Back To Home</button></button></a>
+
+
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Welcome to dreamHouseF</h2>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="username"> Enter your Username :</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Enter your Password :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+        <div class="background-elements">
+            <div class="floating-shape shape1"></div>
+            <div class="floating-shape shape2"></div>
+            <div class="floating-shape shape3"></div>
+        </div>
+    </div>
+</body>
+</html>
